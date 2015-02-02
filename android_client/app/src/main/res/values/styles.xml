@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- Actionbar color -->
+        <item name="colorPrimary">@color/primary_color_green_dark</item>
+        <!--Status bar color-->
+        <item name="colorPrimaryDark">@color/primary_color_green_dark</item>
+        <!--Window color-->
+        <item name="android:windowBackground">@color/dim_foreground_material_dark</item>
+
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+
+        <!--<item name="android:actionMenuTextColor">@android:color/black</item>-->
+
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <!--第一次创建新Activity是调用的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/in_bottom</item>
+        <!--activity还没有finish()下退出效果-->
+        <item name="android:activityOpenExitAnimation">@anim/out_center</item>
+        <!--上一个activity返回进入效果-->
+        <item name="android:activityCloseEnterAnimation">@anim/in_center</item>
+        <!--调用finish关闭该Activity是调用的动画-->
+        <item name="android:activityCloseExitAnimation">@anim/out_bottom</item>
+
+    </style>
+
+
+</resources>

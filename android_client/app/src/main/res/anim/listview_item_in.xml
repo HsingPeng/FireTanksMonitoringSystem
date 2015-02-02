@@ -1,0 +1,5 @@
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/in_fade"
+    android:animationOrder="normal"
+    android:startOffset="500"
+    android:delay="0.5" />

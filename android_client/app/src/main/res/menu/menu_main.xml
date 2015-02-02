@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cn.edu.njupt.tanksms.ui.LoginActivity">
+    <item android:id="@+id/action_log" android:title="@string/log"
+        android:orderInCategory="50" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_help" android:title="@string/help"
+        android:orderInCategory="51" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_settings" android:title="@string/settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_logout" android:title="@string/logout"
+        android:orderInCategory="102" app:showAsAction="never" />
+    <item android:id="@+id/action_exit" android:title="@string/exit"
+        android:orderInCategory="103" app:showAsAction="never" />
+</menu>
