@@ -15,6 +15,7 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         int position = Config.URL.indexOf("/",7);
         String domain = Config.URL.substring(0,position);
         System.out.println(domain);
+        {}
     }
 
 }

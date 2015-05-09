@@ -216,7 +216,7 @@ function getData_3(row_now_3) {
     });
 }
 
-//显示表1
+/*显示表1*/
 function showChart_1(data_array_1) {
 
     if (!jQuery.plot) {
@@ -313,7 +313,7 @@ function showChart_1(data_array_1) {
 
 }
 
-//显示表2
+/*显示表2*/
 function showChart_2(data_array_2) {
 
     if (!jQuery.plot) {
@@ -397,7 +397,7 @@ function showChart_2(data_array_2) {
 
 }
 
-//显示表3
+/*显示表3*/
 function showChart_3(data_array_3) {
 
     if (!jQuery.plot) {
@@ -505,9 +505,14 @@ function GetQueryString(name) {
     return null;
 }
 
-function gDate(arg_1) {
+/*function gDate(arg_1) {
     arg_1.replace('-', '/');
     return new Date(arg_1);
+    "2015/01/09 15:13:24"
+}*/
+function gDate(arg_1) {
+    return new Date(arg_1.substring(0,4),arg_1.substring(5,7),arg_1.substring(8,10),arg_1.substring(11,13),arg_1.substring(14,16),arg_1.substring(17,19));
+    /*return new Date(2015,01,09,15,13,24);*/
 }
 
 function getPageSize_1() {
