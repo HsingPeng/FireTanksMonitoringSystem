@@ -45,7 +45,7 @@ public class Config {
     //线程池大小
     public static final int THREAD_POOL_SIZE = 1;
     //主页面刷新周期
-    public static final long REFRESH_PERIOD = 5000L;
+    public static final long REFRESH_PERIOD = 3000L;
 
     //http连接超时设置
     public static int CONNECT_TIME_OUT = 5000;

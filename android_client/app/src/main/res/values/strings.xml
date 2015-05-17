@@ -32,7 +32,7 @@
     <string name="no_data">无数据</string>
     <string name="water_gage_low">水压较低</string>
     <string name="water_gage_normal">水压正常</string>
-    <string name="water_level_low">水位过低</string>
+    <string name="water_level_low">水位较低</string>
     <string name="water_level_normal">水位正常</string>
     <string name="water_level_too_low">水位过低</string>
     <string name="water_tank">水箱</string>

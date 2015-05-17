@@ -66,6 +66,8 @@ public class MainActivity extends BaseActivity {
         sendTask();
     }
 
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -147,7 +149,7 @@ public class MainActivity extends BaseActivity {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                if(!MainActivity.this.isDestroyed()){
+                if(MainActivity.this.isForeground()){
                     sendTask();
                 }
             }

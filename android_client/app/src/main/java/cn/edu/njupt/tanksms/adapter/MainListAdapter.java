@@ -90,7 +90,7 @@ public class MainListAdapter extends BaseAdapter {
         holder.gage.setText(gage_text);
 
         String level_text = context.getString(R.string.no_data) ;
-        switch(items.get(position).getTemp()){
+        switch(items.get(position).getLevel()){
             case 1:
                     color_flag = 2 ;
                 level_text = context.getString(R.string.water_level_too_low) ;
@@ -106,7 +106,7 @@ public class MainListAdapter extends BaseAdapter {
                 level_text = context.getString(R.string.water_level_normal) ;
                 break;
         }
-        holder.level.setText(gage_text);
+        holder.level.setText(level_text);
 
         switch (color_flag){
             case 0:
