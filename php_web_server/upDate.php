@@ -11,13 +11,13 @@ $gd=$_POST["gd"];
 $td=$_POST["td"];
 $ld=$_POST["ld"];
 
-$result="error";
+$result="update error";
 
 // 创建连接
 $conn = new mysqli("localhost","root","123456", "tanks_db");
 
 if ($conn->connect_error) {
-    $result="error";
+    $result="update error";
 }
 
 $sql = "select count(*) from equipment where eid=?";
@@ -82,10 +82,10 @@ if($flag>0){
 	//执行
 	$mysqli_stmt->execute();
     
-    $result="success";
+    $result="update success";
     
 }else{
-    $result="error";
+    $result="update error";
 }
 
 $conn->close();

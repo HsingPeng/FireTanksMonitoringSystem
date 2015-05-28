@@ -92,17 +92,17 @@ var eid = $("#eid").text();
 var row_now_1_old = 0;
 var row_now_1_new = 0;
 var rowCount_1 = -1;
-var page_size_1 = 10;
+var page_size_1 = 30;           /*默认每次查询数据*/
 
 var row_now_2_old = 0;
 var row_now_2_new = 0;
 var rowCount_2 = -1;
-var page_size_2 = 10;
+var page_size_2 = 30;
 
 var row_now_3_old = 0;
 var row_now_3_new = 0;
 var rowCount_3 = -1;
-var page_size_3 = 10;
+var page_size_3 = 30;
 
 function getURL(type_0, page_size_0, row_now_0) {
     return "getDetails.php?eid=" + eid + "&type=" + type_0 + "&pageSize=" + page_size_0 + "&rowNow=" + row_now_0;
@@ -113,7 +113,7 @@ function getData_1(row_now_1) {
     function onDataReceived(series) {
 
         if (series.data === null) {
-            alert("获取数据错误: " + series.error);
+            alert("获取数据错误!: " + series.error);
         } else {
             rowCount_1 = series.rowCount;
             row_now_1_new = series.rowNow;
@@ -130,7 +130,7 @@ function getData_1(row_now_1) {
     }
 
     function onError(XMLHttpRequest, textStatus, errorThrown) {
-        alert("获取数据错误: " + textStatus);
+        alert("获取数据错误: " + textStatus + " " +errorThrown);
     }
 
     var URL_1 = getURL(1, page_size_1, row_now_1);
@@ -149,7 +149,7 @@ function getData_2(row_now_2) {
     function onDataReceived(series) {
 
         if (series.data === null) {
-            alert("获取数据错误: " + series.error);
+            alert("获取数据错误!: " + series.error);
         } else {
             rowCount_2 = series.rowCount;
             row_now_2_new = series.rowNow;
@@ -166,7 +166,7 @@ function getData_2(row_now_2) {
     }
 
     function onError(XMLHttpRequest, textStatus, errorThrown) {
-        alert("获取数据错误: " + textStatus);
+        alert("获取数据错误: " + textStatus + " " +errorThrown);
     }
 
     var URL_2 = getURL(2, page_size_2, row_now_2);
@@ -184,8 +184,8 @@ function getData_3(row_now_3) {
 
     function onDataReceived(series) {
 
-        if (series.data == null) {
-            alert("获取数据错误: " + series.error);
+        if (series.data === null) {
+            alert("获取数据错误!: " + series.error);
         } else {
             rowCount_3 = series.rowCount;
             row_now_3_new = series.rowNow;
@@ -202,7 +202,7 @@ function getData_3(row_now_3) {
     }
 
     function onError(XMLHttpRequest, textStatus, errorThrown) {
-        alert("获取数据错误: " + textStatus);
+        alert("获取数据错误: " + textStatus  + " " +errorThrown);
     }
 
     var URL_3 = getURL(3, page_size_3, row_now_3);
@@ -518,7 +518,7 @@ function gDate(arg_1) {
 function getPageSize_1() {
     page_size_1 = $('#number_gage').attr("value");
     if (page_size_1 == null || page_size_1 == "" || page_size_1 < 1) {
-        page_size_1 = 10;
+        page_size_1 = 30;
         $('#number_gage').val(page_size_1);
     }
 }
@@ -526,7 +526,7 @@ function getPageSize_1() {
 function getPageSize_2() {
     page_size_2 = $('#number_temp').attr("value");
     if (page_size_2 == null || page_size_2 == "" || page_size_2 < 1) {
-        page_size_2 = 10;
+        page_size_2 = 30;
         $('#number_temp').val(page_size_2);
     }
 }
@@ -534,7 +534,7 @@ function getPageSize_2() {
 function getPageSize_3() {
     page_size_3 = $('#number_level').attr("value");
     if (page_size_3 === null || page_size_3 === "" || page_size_3 < 1) {
-        page_size_3 = 10;
+        page_size_3 = 30;
         $('#number_level').val(page_size_3);
     }
 }

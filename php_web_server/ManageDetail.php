@@ -118,7 +118,7 @@
 								<p>
 								<div class="input-group">
 									  <span class="input-group-addon">每次查询</span>
-									  <input type="number" class="form-control row_1" value="10" id="number_gage" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+									  <input type="number" class="form-control row_1" value="30" id="number_gage" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
 									  <span class="input-group-addon">&nbsp;&nbsp;条</span>
 								</div>
 								</p>
@@ -155,7 +155,7 @@
 								<p>
 								<div class="input-group">
 									  <span class="input-group-addon">每次查询</span>
-									  <input type="number" class="form-control row_1" value="10" id="number_temp" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+									  <input type="number" class="form-control row_1" value="30" id="number_temp" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
 									  <span class="input-group-addon">&nbsp;&nbsp;条</span>
 								</div>
 								</p>
@@ -192,7 +192,7 @@
 								<p>
 								<div class="input-group">
 									  <span class="input-group-addon">每次查询</span>
-									  <input type="number" class="form-control row_1" value="10" id="number_level" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+									  <input type="number" class="form-control row_1" value="30" id="number_level" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
 									  <span class="input-group-addon">&nbsp;&nbsp;条</span>
 								</div>
 								</p>
@@ -245,7 +245,8 @@
 	
 	<script src="media/js/app.js"></script>
 	<script src="media/js/manageDetail.js"></script>
-	
+	<!--<script src="media/js/debuggap.js" type="text/javascript"></script>-->
+
 	<script>
 
 		jQuery(document).ready(function() {

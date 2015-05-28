@@ -8,11 +8,12 @@ var Manage = (function () {
             
         },
         
+        /* 3000毫秒刷新一次 */
         intervalRefresh: function () {
 
             setTimeout(function () {
                 Manage.getEquipment();
-            }, 5000);
+            }, 3000);
             
         },
         
@@ -124,13 +125,16 @@ var Manage = (function () {
                            var x = data[y]; Manage.addEquipment(x["eid"],x["ename"],x["serialnum"],x["water_gage"],x["water_temp"],x["water_level"]);
                         }
                     }
-                Manage.addEquipment(3,"NO.3","",1,13,3);//添加模拟数据
+                Manage.addEquipment(3,"NO.3模拟","",1,13,3);
+                /*添加模拟数据*/
+                
                 Manage.intervalRefresh();
                 
         }
 
         function onError(XMLHttpRequest, textStatus, errorThrown){
-            alert("获取数据错误: "+textStatus);
+            /*alert("获取数据错误: "+textStatus);*/
+            $("#refresh_time").text("与服务器断开连接！！！");
             Manage.intervalRefresh();
         }
            

@@ -24,7 +24,6 @@ switch ($type){
 		break;
 }
 
-
 function type_gage($eid,$pageSize,$rowNow){
 	
 	$result;
