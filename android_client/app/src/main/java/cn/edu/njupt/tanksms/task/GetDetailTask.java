@@ -78,6 +78,7 @@ public class GetDetailTask extends BaseTask {
         String after = data.substring(delete_end,data.length());
         //LOGE(TAG,before + middle + after);
         return before + middle + after;
+        //return data ;
     }
 
     private void setBroadcast(String[] result_text) {

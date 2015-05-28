@@ -20,6 +20,7 @@ import cn.edu.njupt.tanksms.R;
 import cn.edu.njupt.tanksms.model.MainListItem;
 import cn.edu.njupt.tanksms.service.MyService;
 import cn.edu.njupt.tanksms.util.AccountHelper;
+import cn.edu.njupt.tanksms.util.LogUtils;
 import cn.edu.njupt.tanksms.widget.MyDialog;
 import cn.edu.njupt.tanksms.widget.MySnackBar;
 
@@ -77,6 +78,8 @@ public class DetailActivity extends BaseActivity {
     }
 
     private void showData(String data) {
+        //LogUtils.LOGD(TAG,data);
+        //webView.loadUrl("http://192.168.99.225/TanksMS/ManageDetail.php?eid=1&ename=%E4%B8%80%E5%8F%B7");
         webView.loadDataWithBaseURL(Config.URL,data,"text/html", "UTF-8", null);
     }
 

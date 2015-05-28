@@ -57,15 +57,16 @@ public class AccountHelper {
 
     public void syncCookie(){
         SharedPreferences sharedPref = context.getSharedPreferences(Config.SHARED_PREF, Context.MODE_PRIVATE);
-        String cookies = sharedPref.getString("Cookie","");
-        int position = Config.URL.indexOf("/",7);
-        String domain = Config.URL.substring(0,position);
+        String cookies = sharedPref.getString("Cookie", "");
+        int position = Config.URL.indexOf("/", 7);
+        String domain = Config.URL.substring(0, position);
         CookieSyncManager.createInstance(context);
         CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptCookie(true);
-        cookieManager.removeSessionCookie();//移除
+        //cookieManager.removeSessionCookie();//该句在android4.1至4.2上会失效
+        cookieManager.removeAllCookie();
         cookieManager.setCookie(domain, cookies+"; path=/");//cookies是在HttpClient中获得的cookie
-        LOGE(TAG, cookieManager.getCookie(domain));
+        LOGE(TAG,"domain==>" + domain + " Cookie==>" + cookieManager.getCookie(domain));
         CookieSyncManager.getInstance().sync();
     }
 
